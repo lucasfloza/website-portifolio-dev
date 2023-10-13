@@ -13,16 +13,21 @@ import Nav from "../components/Nav";
 import Header from "../components/Header";
 import TopLeftImg from "../components/TopLeftImg";
 
+// Providers themes
+import Providers from "../hook/Providers";
+
 const Layout = ({ children }) => {
   return (
-    <div
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
-    >
-      <TopLeftImg />
-      <Nav />
-      <Header />
-      {children}
-    </div>
+    <Providers>
+      <div
+        className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+      >
+        <TopLeftImg />
+        <Nav />
+        <Header />
+        {children}
+      </div>
+    </Providers>
   );
 };
 
